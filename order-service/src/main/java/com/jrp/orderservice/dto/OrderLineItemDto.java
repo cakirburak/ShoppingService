@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class OrderLineItemsDto {
+public class OrderLineItemDto {
 
 	private Long id;
 	private String skuCode;

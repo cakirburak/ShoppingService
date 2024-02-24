@@ -18,7 +18,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class OrderLineItems {
+public class OrderLineItem {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
