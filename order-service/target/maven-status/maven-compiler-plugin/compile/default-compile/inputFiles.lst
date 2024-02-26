@@ -1,0 +1,8 @@
+/Users/burak/Dev/Spring Workspace/shopping-services/order-service/src/main/java/com/jrp/orderservice/model/OrderLineItem.java
+/Users/burak/Dev/Spring Workspace/shopping-services/order-service/src/main/java/com/jrp/orderservice/model/Order.java
+/Users/burak/Dev/Spring Workspace/shopping-services/order-service/src/main/java/com/jrp/orderservice/OrderServiceApplication.java
+/Users/burak/Dev/Spring Workspace/shopping-services/order-service/src/main/java/com/jrp/orderservice/service/OrderService.java
+/Users/burak/Dev/Spring Workspace/shopping-services/order-service/src/main/java/com/jrp/orderservice/dto/OrderLineItemDto.java
+/Users/burak/Dev/Spring Workspace/shopping-services/order-service/src/main/java/com/jrp/orderservice/dto/OrderRequest.java
+/Users/burak/Dev/Spring Workspace/shopping-services/order-service/src/main/java/com/jrp/orderservice/repository/OrderRepository.java
+/Users/burak/Dev/Spring Workspace/shopping-services/order-service/src/main/java/com/jrp/orderservice/controller/OrderController.java
