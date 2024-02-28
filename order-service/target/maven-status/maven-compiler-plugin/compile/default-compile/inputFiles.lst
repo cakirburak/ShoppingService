@@ -5,4 +5,6 @@
 /Users/burak/Dev/Spring Workspace/shopping-services/order-service/src/main/java/com/jrp/orderservice/dto/OrderLineItemDto.java
 /Users/burak/Dev/Spring Workspace/shopping-services/order-service/src/main/java/com/jrp/orderservice/dto/OrderRequest.java
 /Users/burak/Dev/Spring Workspace/shopping-services/order-service/src/main/java/com/jrp/orderservice/repository/OrderRepository.java
+/Users/burak/Dev/Spring Workspace/shopping-services/order-service/src/main/java/com/jrp/orderservice/config/WebClientConfig.java
+/Users/burak/Dev/Spring Workspace/shopping-services/order-service/src/main/java/com/jrp/orderservice/dto/InventoryResponse.java
 /Users/burak/Dev/Spring Workspace/shopping-services/order-service/src/main/java/com/jrp/orderservice/controller/OrderController.java
