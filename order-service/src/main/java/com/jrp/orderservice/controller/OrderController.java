@@ -1,5 +1,7 @@
 package com.jrp.orderservice.controller;
 
+import java.util.concurrent.CompletableFuture;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,6 +13,7 @@ import com.jrp.orderservice.dto.OrderRequest;
 import com.jrp.orderservice.service.OrderService;
 
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.timelimiter.annotation.TimeLimiter;
 import lombok.RequiredArgsConstructor;
 
 @RestController
@@ -23,13 +26,13 @@ public class OrderController {
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	@CircuitBreaker(name = "inventory", fallbackMethod= "cbFallbackMethod")
-	public String placeOrder(@RequestBody OrderRequest orderRequest) {
-		orderService.placeOrder(orderRequest);
-		return "Order placed successfuly!";
+	@TimeLimiter(name= "inventory")
+	public CompletableFuture<String> placeOrder(@RequestBody OrderRequest orderRequest) {
+		return CompletableFuture.supplyAsync(() -> orderService.placeOrder(orderRequest));
 	}
 	
-	public String cbFallbackMethod(OrderRequest orderRequest, RuntimeException runTimeException)
+	public CompletableFuture<String> cbFallbackMethod(OrderRequest orderRequest, RuntimeException runTimeException)
 	{
-		return "Something went wrong while placing order!!";
+		return CompletableFuture.supplyAsync(() -> "Something went wrong while placing order!!");
 	}
 }
