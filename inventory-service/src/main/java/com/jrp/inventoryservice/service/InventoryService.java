@@ -10,11 +10,10 @@ import com.jrp.inventoryservice.repository.InventoryRepository;
 
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
-import lombok.extern.slf4j.Slf4j;
 
 @Service
 @RequiredArgsConstructor
-@Slf4j
+//@Slf4j
 public class InventoryService {
 
 	private final InventoryRepository inventoryRepository;
@@ -23,10 +22,10 @@ public class InventoryService {
 	@SneakyThrows
 	public List<InventoryResponse> isInStock(List<String> skuCode) {
 
-		// Illustration for timeout feature
-		log.info("START: Checking if item is in stock");
-		Thread.sleep(10000);
-		log.info("END: Checking if item is in stock");
+//		// Illustration for timeout feature
+//		log.info("START: Checking if item is in stock");
+//		Thread.sleep(10000);
+//		log.info("END: Checking if item is in stock");
 
 		return inventoryRepository.findBySkuCodeIn(skuCode).stream()
 									.map( inventory -> 
